@@ -1,0 +1,21 @@
+SELECT AVG(price)
+FROM superstore;
+
+SELECT SUM(stock_quantity)
+FROM superstore;
+
+SELECT MAX(price)
+FROM superstore;
+
+SELECT COUNT(item_id)
+FROM superstore;
+
+SELECT item_name, price
+FROM superstore
+ORDER BY price desc;
+
+SELECT *
+FROM superstore
+WHERE price
+GROUP BY item_id
+ORDER BY category;
