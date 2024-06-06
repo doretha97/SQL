@@ -65,6 +65,11 @@ SELECT *
 FROM fortune_companies
 ;
 
+--MIN/Max revenue 
+SELECT MIN(revenue), MAX(revenue)
+FROM fortune_companies
+;
+
 -- Maternity Leave Weeks, MIN and MAX
 SELECT MIN(maternity_leave_weeks), MAX(maternity_leave_weeks)
 FROM fortune_companies
@@ -86,6 +91,34 @@ END AS "average maternity leave rating"
 FROM fortune_companies
 GROUP BY industry
 ORDER BY maternity_leave_weeks
+;
+
+-- Top 5 total_revenue by company_name
+SELECT SUM(revenue) AS total_rev, company_name
+FROM fortune_companies
+GROUP BY company_name
+HAVING total_rev >=350
+ORDER By total_rev DESC
+LIMIT 5
+;
+
+-- Top 6 Companies in the retail industry based on the 1000+ employees
+SELECT company_name, employees, industry
+FROM fortune_companies
+WHERE employees>=1000
+AND industry ='Retail'
+ORDER BY industry
+LIMIT 6
+;
+
+
+--Top 10 companies with highest number of paid_time_off_days or maternity weeks greather than 7
+SELECT *
+FROM fortune_companies
+WHERE paid_time_off_days >=15
+OR maternity_leave_weeks <=7
+ORDER BY paid_time_off_days desc
+LIMIT 10
 ;
 
 
