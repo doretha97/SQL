@@ -1,6 +1,3 @@
-
-
-
 --In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
 
 -- 1 How many orders were placed in January?
@@ -33,6 +30,11 @@ FROM BIT_DB.JanSales AS jan
 GROUP BY product, price
 ORDER BY price ASC
 LIMIT 1
+;
+-- OR
+#OR 
+SELECT distinct product, price FROM BIT_DB.JanSales 
+ORDER BY price ASC LIMIT 1
 ;
 
 -- 5 What is the total revenue for each product sold in January?
