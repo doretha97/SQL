@@ -60,6 +60,22 @@ FROM
 invoices
 ;
 
+-- 6. Provide a query that shows the invoices associated with each sales agent. The resulting table should include the Sales Agent's full name.
+SELECT 
+emp.LastName
+,emp.FirstName
+,emp.Title
+,inv.InvoiceId
+
+FROM employees AS emp
+
+JOIN customers ON customers.SupportRepId=emp.EmployeeId 
+JOIN invoices AS inv ON inv.CustomerId = customers.CustomerId
+
+WHERE Title ="Sales Support Agent"
+;
+
+
 
 
 
