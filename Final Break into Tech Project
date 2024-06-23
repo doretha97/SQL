@@ -44,5 +44,14 @@ LEFT JOIN invoices ON cust.CustomerId = invoices.CustomerId
 WHERE invoices.BillingCountry ="Brazil"
 ;
 
+-- 4. Show the Employees who are Sales Agents.
+SELECT *
+
+FROM
+employees AS emp
+
+WHERE Title= "Sales Support Agent"
+;
+
 
 
