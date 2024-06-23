@@ -1,7 +1,7 @@
 # Here are potential answers to the example questions in the final SQL project. 
 
 -- FINAL Project Break Into Tech
--- Show Customers (their full names, customer ID, and country) who are not in the US.
+-- 1. Show Customers (their full names, customer ID, and country) who are not in the US.
 SELECT 
 FirstName
 ,LastName
