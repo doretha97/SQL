@@ -13,3 +13,18 @@ customers
 
 WHERE Country<>'USA'
 ;
+
+-- 2. Show only the Customers from Brazil.
+SELECT 
+FirstName
+,LastName
+,CustomerId
+,Country
+
+
+FROM
+customers
+
+WHERE Country= "Brazil"
+;
+
