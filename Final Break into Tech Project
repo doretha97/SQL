@@ -21,10 +21,28 @@ FirstName
 ,CustomerId
 ,Country
 
-
 FROM
 customers
 
 WHERE Country= "Brazil"
 ;
+
+-- 3. Find the Invoices of customers who are from Brazil. The resulting table should show the customer's full name, Invoice ID, Date of the invoice, and billing country.
+SELECT 
+cust.FirstName
+,cust.LastName
+,cust.Country
+,invoices.InvoiceId
+,invoices.InvoiceDate
+,invoices.BillingCountry
+
+FROM
+customers AS cust
+
+LEFT JOIN invoices ON cust.CustomerId = invoices.CustomerId
+
+WHERE invoices.BillingCountry ="Brazil"
+;
+
+
 
