@@ -91,6 +91,15 @@ JOIN invoices AS inv ON cust.CustomerId=inv.CustomerId
 JOIN employees AS emp ON cust.SupportRepId=emp.EmployeeId
 ;
 
+-- 8. How many Invoices were there in 2009?
+SELECT COUNT(*)
+
+FROM invoices
+ 
+WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31'
+;
+
+
 
 
 
