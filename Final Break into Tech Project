@@ -99,7 +99,13 @@ FROM invoices
 WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31'
 ;
 
+-- 9.What are the total sales for 2009?
+SELECT SUM(Total)
 
+FROM invoices
+
+WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31'
+;
 
 
 
