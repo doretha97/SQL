@@ -107,6 +107,16 @@ FROM invoices
 WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31'
 ;
 
+-- 10. Write a query that includes the purchased track name with each invoice line ID.
+SELECT tracks.Name
+,inv.InvoiceLineId
+
+FROM tracks
+
+JOIN invoice_items AS inv ON tracks.TrackId=inv.TrackId
+;
+
+
 
 
 
